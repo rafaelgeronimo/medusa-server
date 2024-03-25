@@ -4,10 +4,10 @@ on:
   schedule:
     - cron: "*/14 * * * *"
 
+jobs:
+  render-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Products
+        run: curl https://github.com/rafaelgeronimo/medusa-server/actions
 
-  jobs:
-    render-request:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Get products
-          run: curl https://medusa-server-3e1v.onrender.com/store/products
